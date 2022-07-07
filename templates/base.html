@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -8,11 +7,12 @@
 
 {% include '_inc/_topbar.html' %}
 
-{% include '_inc/_navbar.html' %}
 
+{% block index %}
+    {% include '_inc/_navbar_page.html' %}
+{% endblock %}
 
-{% include 'shop/shop_base.html' %}
-
+{% block contact %}{% endblock contact %}
 
 {% include '_inc/_footer.html' %}
 

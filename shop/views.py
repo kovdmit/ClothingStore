@@ -2,5 +2,9 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'base.html')
+    context = {'index': True}
+    return render(request, 'shop/shop_index.html', context)
 
+
+def contact(request):
+    return render(request, 'shop/contact.html')

@@ -1,3 +1,8 @@
+{% extends 'base.html' %}
+
+{% block index %}
+{% include '_inc/_navbar_index.html' %}
+
 {% include 'shop/_inc/_featured.html' %}
 
 {% include 'shop/_inc/_categories.html' %}
@@ -11,3 +16,4 @@
 {% include 'shop/_inc/_products2.html' %}
 
 {% include 'shop/_inc/_vendor.html' %}
+{% endblock index %}
