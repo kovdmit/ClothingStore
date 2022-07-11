@@ -49,7 +49,8 @@ class Product(models.Model):
     information = models.TextField(blank=True)
     size = models.ManyToManyField(Size, blank=True)
     color = models.ManyToManyField(Color, blank=True)
-    rating = models.PositiveSmallIntegerField(blank=True)
+    rating = models.PositiveSmallIntegerField(blank=True, default=0)
+    ratingpeople = models.PositiveSmallIntegerField(blank=True, default=0)
     views = models.PositiveIntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
 
@@ -59,3 +60,6 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'pk': self.pk})

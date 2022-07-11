@@ -9,6 +9,6 @@ urlpatterns = [
     path('checkout/', checkout, name='checkout'),
     path('cart/', cart, name='cart'),
     path('catalog/', catalog, name='catalog'),
-    path('detail/', detail, name='detail'),
+    path('detail/<int:pk>/', detail, name='detail'),
 ]
 
