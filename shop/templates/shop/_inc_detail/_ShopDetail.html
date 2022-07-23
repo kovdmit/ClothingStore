@@ -52,7 +52,11 @@
                 </small>
             </div>
 
-            <h3 class="font-weight-semi-bold mb-4">{{ product.price }} ₽</h3>
+            <h3 class="font-weight-semi-bold mb-4">{{ product.price }} ₽
+                {% if product.oldprice %}
+                <del>{{ product.oldprice }} ₽</del>
+                {% endif %}</h3>
+
             <p class="mb-4">{{ product.short_desc }}</p>
             <div class="d-flex mb-3">
                 <p class="text-dark font-weight-medium mb-0 mr-3">Размеры:</p>

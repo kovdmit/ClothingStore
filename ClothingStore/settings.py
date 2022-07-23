@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'debug_toolbar',
     'ckeditor',
+    'mptt',
     'ckeditor_uploader',
     'captcha',
 ]
